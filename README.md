@@ -33,3 +33,6 @@ The sound chip on this SoC is a rt5651 which seems to be somewhat supported in t
 
 ## Bluetooth
 Look above @Installing wireless drivers
+
+## Camera
+The camera is of very low quality and I've not looked into getting it working yet. It doesn't look like the camera is a USB camera thus getting it working might be pretty hard and is of low priority to me.
