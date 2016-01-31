@@ -26,6 +26,7 @@ Realtek Bluetooth :3-wire sync pattern resend : 3, len: 8
 1. Get touchscreen driver from ```https://github.com/onitake/gslx680-acpi```
 2. Run ```./fwtool -c GSL_TS_CFG_NEW_WINTRON_70.h -2 -m 1680 -w 1024 -h 600 -t 10 /lib/firmware/silead_ts.fw``` to convert and install the firmware for the touchscreen driver
 3. Build and install the driver
+4. By default the touchscreen is not calibrated so you will have to calibrate the touchscreen using xinput_calibrator.
 
 # TODO
 ## Sound
@@ -36,3 +37,6 @@ Look above @Installing wireless drivers
 
 ## Camera
 The camera is of very low quality and I've not looked into getting it working yet. It doesn't look like the camera is a USB camera thus getting it working might be pretty hard and is of low priority to me.
+
+## Power management
+While the battery is being detected there is zero information about the status of the battery. Unluckily the same applies for external power input.
