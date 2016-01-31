@@ -1,0 +1,32 @@
+Linux on TrekStor SurfTab wintron 7.0
+=====================================
+
+# Linux 4.4.0
+## Get Linux 4.4.0 from kernel.org
+## Installing wireless drivers
+1. Get driver for SDIO WiFi card from ```https://github.com/hadess/rtl8723bs```
+2. Apply patches from 'patches' directory of driver to kernel
+3. Build and install the driver
+
+Theoretically this card also supports Bluetooth via hciattach but I couldn't get it working. Supposably [this](https://github.com/lwfinger/rtl8723bs_bt) driver works but as I said I had no luck with it. More precisely I couldn't get the module to talk to me via the serial bus. I'm always getting
+
+```
+Realtek Bluetooth init uart with init speed:115200, final_speed:115200, type:HCI UART H5
+Realtek Bluetooth :Realtek hciattach version 2.5
+Realtek Bluetooth :3-wire sync pattern resend : 1, len: 8
+Realtek Bluetooth :3-wire sync pattern resend : 2, len: 8
+Realtek Bluetooth :3-wire sync pattern resend : 3, len: 8
+...
+```
+
+## Getting the touchscreen working
+1. Get touchscreen driver from ```https://github.com/onitake/gslx680-acpi```
+2. Run ```./fwtool -c GSL_TS_CFG_NEW_WINTRON_70.h -2 -m 1680 -w 1024 -h 600 -t 10 /lib/firmware/silead_ts.fw``` to convert and install the firmware for the touchscreen driver
+3. Build and install the driver
+
+# TODO
+## Sound
+The sound chip on this SoC is a rt5651 which seems to be somewhat supported in the newest kernel git 4.5-rc1+ but it still doesn't work on the wintron though because of some missing DAIs. @Manawyrm tested a recent kernel. You can take a look at the bootlog [here](https://gist.github.com/Manawyrm/70d90e95e9c578a7fb26). We will write an ALSA mailinglist post about this soon(tm)
+
+## Bluetooth
+Look above @Installing wireless drivers
