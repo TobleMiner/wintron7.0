@@ -3,6 +3,9 @@ Linux on TrekStor SurfTab wintron 7.0
 
 # Linux 4.4.0
 ## Get Linux 4.4.0 from kernel.org
+### Fixing timing problems
+Add ```clocksource=tsc``` to your kernel cmdline to fix issues with timing, timekeeping and a lot of other time related things
+
 ## Installing wireless drivers
 1. Get driver for SDIO WiFi card from ```https://github.com/hadess/rtl8723bs```
 2. Apply patches from 'patches' directory of driver to kernel
