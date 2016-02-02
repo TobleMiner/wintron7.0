@@ -1,0 +1,45 @@
+/proc/asound/
+├── bytcrrt5651 -> card0
+├── card0
+│   ├── compr2
+│   │   └── info
+│   ├── id
+│   ├── pcm0c
+│   │   ├── info
+│   │   └── sub0
+│   │       ├── hw_params
+│   │       ├── info
+│   │       ├── prealloc
+│   │       ├── prealloc_max
+│   │       ├── status
+│   │       └── sw_params
+│   ├── pcm0p
+│   │   ├── info
+│   │   └── sub0
+│   │       ├── hw_params
+│   │       ├── info
+│   │       ├── prealloc
+│   │       ├── prealloc_max
+│   │       ├── status
+│   │       └── sw_params
+│   └── pcm1p
+│       ├── info
+│       └── sub0
+│           ├── hw_params
+│           ├── info
+│           ├── prealloc
+│           ├── prealloc_max
+│           ├── status
+│           └── sw_params
+├── cards
+├── devices
+├── modules
+├── oss
+│   ├── devices
+│   └── sndstat
+├── pcm
+├── seq
+├── timers
+└── version
+
+11 directories, 31 files
