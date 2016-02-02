@@ -30,7 +30,7 @@
 [    0.000000] BIOS-e820: [mem 0x00000000ffd00000-0x00000000ffffffff] reserved
 [    0.000000] NX (Execute Disable) protection: active
 [    0.000000] efi: EFI v2.40 by INSYDE Corp.
-[    0.000000] efi:  ACPI 2.0=0x3cdf7014  ESRT=0x3bb9cf10  SMBIOS=0x3bd65000 
+[    0.000000] efi:  ACPI 2.0=0x3cdf7014  ESRT=0x3bb9cf10  SMBIOS=0x3bd65000
 [    0.000000] SMBIOS 2.7 present.
 [    0.000000] DMI: Insyde ST70416-6/Type2 - Board Product Name, BIOS TREK.G.WI71C.JGBMRBA04 11/02/2015
 [    0.000000] e820: update [mem 0x00000000-0x00000fff] usable ==> reserved
@@ -49,7 +49,7 @@
 [    0.000000]   5 base 03C800000 mask FFFC00000 uncachable
 [    0.000000]   6 disabled
 [    0.000000]   7 disabled
-[    0.000000] x86/PAT: Configuration [0-7]: WB  WC  UC- UC  WB  WC  UC- WT  
+[    0.000000] x86/PAT: Configuration [0-7]: WB  WC  UC- UC  WB  WC  UC- WT
 [    0.000000] Scanning 1 areas for low memory corruption
 [    0.000000] Base memory trampoline at [ffff880000098000] 98000 size 24576
 [    0.000000] BRK [0x01b47000, 0x01b47fff] PGTABLE
@@ -141,7 +141,7 @@
 [    0.000000] setup_percpu: NR_CPUS:128 nr_cpumask_bits:128 nr_cpu_ids:4 nr_node_ids:1
 [    0.000000] PERCPU: Embedded 32 pages/cpu @ffff88003c400000 s92952 r8192 d29928 u524288
 [    0.000000] pcpu-alloc: s92952 r8192 d29928 u524288 alloc=1*2097152
-[    0.000000] pcpu-alloc: [0] 0 1 2 3 
+[    0.000000] pcpu-alloc: [0] 0 1 2 3
 [    0.000000] Built 1 zonelists in Node order, mobility grouping on.  Total pages: 242802
 [    0.000000] Policy zone: DMA32
 [    0.000000] Kernel command line: BOOT_IMAGE=/boot/vmlinuz-linux-4.5.0-rc2-tsys-audio-intel noefi root=/dev/disk/by-label/arch clocksource=tsc
@@ -398,12 +398,12 @@
 [    0.660061] mmc1: SDHCI controller on ACPI [INT33BB:00] using ADMA
 [    0.682666] mmc2: SDHCI controller on ACPI [80860F14:02] using ADMA
 [    0.796657] mmc2: new high speed SDHC card at address 0007
-[    0.799123] mmcblk0: mmc2:0007 SL32G 29.0 GiB 
+[    0.799123] mmcblk0: mmc2:0007 SL32G 29.0 GiB
 [    0.814298]  mmcblk0: p1 p2 p128
 [    0.825063] i8042: PNP: No PS/2 controller found. Probing ports directly.
 [    0.953574] mmc0: MAN_BKOPS_EN bit is not set
 [    0.976782] mmc0: new HS200 MMC card at address 0001
-[    0.980775] mmcblk1: mmc0:0001 NCard  14.5 GiB 
+[    0.980775] mmcblk1: mmc0:0001 NCard  14.5 GiB
 [    0.983345] mmcblk1boot0: mmc0:0001 NCard  partition 1 4.00 MiB
 [    0.986641] mmcblk1boot1: mmc0:0001 NCard  partition 2 4.00 MiB
 [    0.989974] mmcblk1rpmb: mmc0:0001 NCard  partition 3 4.00 MiB
@@ -639,6 +639,7 @@
 [   18.618362] ieee80211 phy0: Atheros AR9271 Rev:1
 [   18.632482] ath9k_htc 1-1.1:1.0 wlp0s20u1u1: renamed from wlan0
 [   45.008481] cgroup: cgroup: disabling cgroup2 socket matching due to net_prio or net_cls activation
+As soon as I try to output sound via ALSA this happens:
 [   88.904121] intel_sst_acpi 80860F28:00: Wait timed-out condition:0x0, msg_id:0x0 fw_state 0x1
 [   88.906739] intel_sst_acpi 80860F28:00: fw download failed -16
 [   88.909262] intel_sst_acpi 80860F28:00: FW download fail -16
