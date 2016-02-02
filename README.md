@@ -30,7 +30,10 @@ Realtek Bluetooth :3-wire sync pattern resend : 3, len: 8
 
 # TODO
 ## Sound
-The sound chip on this SoC is a rt5651 which seems to be somewhat supported in the newest kernel git 4.5-rc1+ but it still doesn't work on the wintron though because of some missing DAIs. @Manawyrm tested a recent kernel. You can take a look at the bootlog [here](https://gist.github.com/Manawyrm/70d90e95e9c578a7fb26). We will write an ALSA mailinglist post about this soon(tm)
+The sound chip on this SoC is a rt5651 which seems to be somewhat supported in the newest kernel git 4.5-rc1+ but it still doesn't work on the wintron though because of some missing DAIs. @Manawyrm tested a recent kernel. You can take a look at the bootlog [here](https://gist.github.com/Manawyrm/70d90e95e9c578a7fb26). We wrote an ALSA mailinglist post about this. You can view it [here](http://mailman.alsa-project.org/pipermail/alsa-devel/2016-January/103696.html)
+
+Upate:
+I compiled a new kernel with a [patch](http://www.spinics.net/lists/alsa-devel/msg45910.html) provided by an Intel developer (thanks Pierre!) and now we are getting somewhere. You can find the new logs [here] (https://github.com/TobleMiner/wintron7.0/tree/master/logs/4.5.0-rc2-ARCH-tsys-audio-intel-dirt)
 
 ## Bluetooth
 Look above @Installing wireless drivers
