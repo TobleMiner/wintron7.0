@@ -34,6 +34,7 @@ The sound chip on this SoC is a rt5651 which seems to be somewhat supported in t
 
 Upate:
 I compiled a new kernel with a [patch](http://www.spinics.net/lists/alsa-devel/msg45910.html) provided by an Intel developer (thanks Pierre!) and now we are getting somewhere. You can find the new logs [here] (https://github.com/TobleMiner/wintron7.0/tree/master/logs/4.5.0-rc2-ARCH-tsys-audio-intel-dirty)
+There are still some errors but the compress DAI is now properly initialized. But as soon as I try to use ALSA the intel_sst_acpi driver fails to download required firmware to the audio chipset. We got in touch with the people on alsa-devel again and are now waitig for a response.
 
 ## Bluetooth
 Look above @Installing wireless drivers
