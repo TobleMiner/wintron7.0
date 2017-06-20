@@ -16,7 +16,7 @@ The wireless driver seems to be stable and gives me acceptable throughput at aro
 ## Getting the touchscreen working
 The touchscreen driver is now part of the kernel, too. Again, either enable the driver yourself or use my kernel config.
 
-You will still need firmware for it though. The firmware is pretty easy to find eg. [here](https://github.com/onitake/gsl-firmware/blob/master/firmware/linux/silead/gsl1686-surftab-wintron70-st70416-6.fw) will do. Just move it to ```/lib/firmware/silead/```, reboot and you should be ready to go.
+You will still need firmware for it though. The firmware is pretty easy to find eg. [here](https://github.com/onitake/gsl-firmware/blob/master/firmware/linux/silead/gsl1686-surftab-wintron70-st70416-6.fw). Just move it to ```/lib/firmware/silead/```, reboot and you should be ready to go.
 
 
 # Linux 4.4.0
