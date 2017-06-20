@@ -1,6 +1,16 @@
 Linux on TrekStor SurfTab wintron 7.0
 =====================================
 
+# Linux 4.12~rc6
+
+## Get Linux 4.12~rc6 from kernel.org
+
+### Fixing timing problems
+Add ```clocksource=tsc``` to your kernel cmdline to fix issues with timing, timekeeping and a lot of other time related things
+
+## Installing wireless drivers
+By now the rtl8723bs driver made it into the staging area of linux. Just enable the staging driver or use my kernel config at [this](linux4.12-rc6/Kconfig) and it will work out of the box.
+
 # Linux 4.4.0
 ## Get Linux 4.4.0 from kernel.org
 ### Fixing timing problems
