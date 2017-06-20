@@ -11,6 +11,14 @@ Add ```clocksource=tsc``` to your kernel cmdline to fix issues with timing, time
 ## Installing wireless drivers
 By now the rtl8723bs driver made it into the staging area of linux. Just enable the staging driver or use my kernel config at [this](linux4.12-rc6/Kconfig) and it will work out of the box.
 
+The wireless driver seems to be stable and gives me acceptable throughput at around 20 Mbit/s.
+
+## Getting the touchscreen working
+The touchscreen driver is now part of the kernel, too. Again, either enable the driver yourself or use my kernel config.
+
+You will still need firmware for it though. The firmware is pretty easy to find eg. [here](https://github.com/onitake/gsl-firmware/blob/master/firmware/linux/silead/gsl1686-surftab-wintron70-st70416-6.fw) will do. Just move it to ```/lib/firmware/silead/```, reboot and you should be ready to go.
+
+
 # Linux 4.4.0
 ## Get Linux 4.4.0 from kernel.org
 ### Fixing timing problems
