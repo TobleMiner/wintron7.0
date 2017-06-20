@@ -9,7 +9,7 @@ Linux on TrekStor SurfTab wintron 7.0
 Add ```clocksource=tsc``` to your kernel cmdline to fix issues with timing, timekeeping and a lot of other time related things
 
 ## Installing wireless drivers
-By now the rtl8723bs driver made it into the staging area of linux. Just enable the staging driver or use my kernel config at [this](linux4.12-rc6/Kconfig) and it will work out of the box.
+By now the rtl8723bs driver made it into the staging area of linux. Just enable the staging driver or use my kernel config from [here](linux4.12-rc6/Kconfig) and it will work out of the box.
 
 The wireless driver seems to be stable and gives me acceptable throughput at around 20 Mbit/s.
 
