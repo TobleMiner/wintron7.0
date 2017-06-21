@@ -18,6 +18,19 @@ The touchscreen driver is now part of the kernel, too. Again, either enable the 
 
 You will still need firmware for it though. The firmware is pretty easy to find eg. [here](https://github.com/onitake/gsl-firmware/blob/master/firmware/linux/silead/gsl1686-surftab-wintron70-st70416-6.fw). Just move it to ```/lib/firmware/silead/```, reboot and you should be ready to go.
 
+## Battery monitoring
+
+The battery monitoring works pretty well. You will need to enable the ```axp288_fuel_gauge``` driver in the kernel configuration (mine has it already enabled, obviously) and then it will just work out of the box.
+
+It will show up in ```/sys/class/power_supply/axp288_fuel_gauge```and ```cat /sys/class/power_supply/axp288_fuel_gauge/capacity``` will give you a correct capacity indication.
+
+Note that I get a lot of 
+
+```
+axp288_fuel_gauge axp288_fuel_gauge: ADC charge current read failed:-19
+
+```
+in my dmesg though and charge current monitoring doesn't work.
 
 # Linux 4.4.0
 ## Get Linux 4.4.0 from kernel.org
@@ -59,6 +72,3 @@ Look above @Installing wireless drivers
 
 ## Camera
 The camera is of very low quality and I've not looked into getting it working yet. It doesn't look like the camera is a USB camera thus getting it working might be pretty hard and is of low priority to me.
-
-## Power management
-While the battery is being detected there is zero information about the status of the battery. Unluckily the same applies for external power input.
