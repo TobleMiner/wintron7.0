@@ -1,0 +1,13 @@
+[global]
+module_name = media
+mount_source = baytrail
+record_type = regular
+
+[properties]
+ro.camera.platform.compat = baytrail
+
+[device]
+# pci:v00008086d00000F31sv*sd*bc*sc*i*
+bus = pci
+vid = 00008086
+did = 00000F31

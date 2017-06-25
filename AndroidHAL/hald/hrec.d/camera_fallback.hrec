@@ -1,0 +1,4 @@
+[global]
+record_type = fallback
+module_name = camera
+library_name = camera.uvc.so

@@ -1,0 +1,9 @@
+# BCM4752 FLP HAL record
+
+[global]
+module_name = flp
+library_name = flp.bcm4752.so
+
+[device]
+bus = acpi
+desc = BCM4752

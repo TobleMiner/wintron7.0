@@ -1,0 +1,20 @@
+# AK009911 Magnetometer HAL record
+
+[global]
+module_name = sensors
+library_name = iio-sensors-hal.so
+
+[device]
+bus = acpi
+desc = AK009911
+
+[properties]
+ro.iio.magn.name = AK009911 Compass
+ro.iio.magn.vendor = Asahi Kasei
+ro.iio.magn.max_range = 9800
+ro.iio.magn.resolution = 0.06
+ro.iio.magn.power = 2.4
+
+[fuse]
+src_name = android.hardware.sensor.compass.xml
+mount_type = permissions

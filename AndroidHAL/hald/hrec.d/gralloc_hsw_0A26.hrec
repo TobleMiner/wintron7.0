@@ -1,0 +1,13 @@
+[global]
+module_name = gralloc
+library_name = gralloc.autodetect.so
+mount_source = ufo_hsw
+record_type = regular
+component_type = gfx
+
+[device]
+# pci:v00008086d00000A26sv*sd*bc03sc*i*
+bus = pci
+vid = 00008086
+did = 00000A26
+bclass = 03

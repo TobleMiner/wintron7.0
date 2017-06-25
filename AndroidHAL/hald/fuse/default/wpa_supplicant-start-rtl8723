@@ -1,0 +1,1 @@
+exec /system/bin/wpa_supplicant -ip2p0 -Dnl80211 -c/data/misc/wifi/p2p_supplicant.conf -pforce_single_radio=1 -N -iwlan0 -Dnl80211 -c/data/misc/wifi/wpa_supplicant.conf -I/system/etc/wifi/wpa_supplicant_overlay.conf -O/data/misc/wifi/sockets -puse_p2p_group_interface=1,force_single_radio=1 -e/data/misc/wifi/entropy.bin -g@android:wpa_wlan0

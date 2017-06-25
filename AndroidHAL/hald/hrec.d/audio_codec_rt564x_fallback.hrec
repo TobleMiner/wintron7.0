@@ -1,0 +1,7 @@
+[global]
+module_name = audio
+record_type = fallback
+
+[properties]
+persist.audio.audioConf = AudioParameterFramework.xml
+persist.audio.routeConf = RouteParameterFramework.xml

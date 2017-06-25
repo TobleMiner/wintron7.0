@@ -1,0 +1,26 @@
+# BCM4752 GPS HAL record
+
+[global]
+module_name = gps
+library_name = gps.bcm4752.so
+start_service = gpsd
+
+[fuse]
+src_name = gpsconfig_4752_extlna.xml
+dst_name = gps_bcm4752.xml
+
+[fuse]
+src_name = android.hardware.location.gps.xml
+mount_type = permissions
+
+[device]
+bus = acpi
+desc = BCM4752E
+
+[script]
+filename = rc.gps-bcm4752
+one_shot = 1
+
+[properties]
+ro.spid.gps.RfType = GL_RF_47531_BRCM_EXT_LNA
+ro.spid.gps.FrqPlan = FRQ_PLAN_26MHZ_2PPM

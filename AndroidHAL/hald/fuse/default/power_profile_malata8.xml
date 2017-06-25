@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+**
+** Copyright 2009, The Android Open Source Project
+**
+** Licensed under the Apache License, Version 2.0 (the "License")
+** you may not use this file except in compliance with the License.
+** You may obtain a copy of the License at
+**
+**     http://www.apache.org/licenses/LICENSE-2.0
+**
+** Unless required by applicable law or agreed to in writing, software
+** distributed under the License is distributed on an "AS IS" BASIS,
+** WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+** See the License for the specific language governing permissions and
+** limitations under the License.
+*/
+-->
+
+<device name="Android">
+  <!-- Most values are the incremental current used by a feature,
+       in mA (measured at nominal voltage).
+       The default values are deliberately incorrect dummy values.
+       OEM's must measure and provide actual values before
+       shipping a device.
+       Example real-world values are given in comments, but they
+       are totally dependent on the platform and can vary
+       significantly, so should be measured on the shipping platform
+       with a power meter. -->
+  <item name="none">0</item>
+  <!-- SCREEN details -->
+  <item name="screen.on">295</item>
+  <item name="screen.full">330</item>
+  <!-- BLUETOOTH details -->
+  <item name="bluetooth.active">205</item>
+  <item name="bluetooth.on">1.9</item>
+  <!-- WIFI details -->
+  <item name="wifi.on">3.8</item>
+  <item name="wifi.active">390</item>
+  <item name="wifi.scan">45</item>
+  <!-- DSP details -->
+  <item name="dsp.audio">65</item>
+  <item name="dsp.video">210</item>
+  <!-- GPS details -->
+  <item name="gps.on">75</item>
+  <!-- RADIO details -->
+  <item name="radio.active">0</item>
+  <item name="radio.scanning">0</item>
+  <!-- Current consumed by the radio at different signal strengths, when paging -->
+  <array name="radio.on"> <!-- Strength 0 to BINS-1 -->
+      <value>0</value>
+      <value>0</value>
+  </array>
+  <!-- Different CPU speeds as reported in
+       /sys/devices/system/cpu/cpu0/cpufreq/stats/time_in_state -->
+  <array name="cpu.speeds">
+      <value>499000</value>  <!-- 499  MHz CPU speed -->
+      <value>583000</value>  <!-- 583  MHz CPU speed -->
+      <value>666000</value>  <!-- 666  MHz CPU speed -->
+      <value>749000</value>  <!-- 749  MHz CPU speed -->
+      <value>833000</value>  <!-- 833  MHz CPU speed -->
+      <value>916000</value>  <!-- 916  MHz CPU speed -->
+      <value>999000</value>  <!-- 999  MHz CPU speed -->
+      <value>1083000</value> <!-- 1083 MHz CPU speed -->
+      <value>1166000</value> <!-- 1166 MHz CPU speed -->
+      <value>1249000</value> <!-- 1249 MHz CPU speed -->
+      <value>1333000</value> <!-- 1333 MHz CPU speed -->
+      <value>1416000</value> <!-- 1416 MHz CPU speed -->
+      <value>1499000</value> <!-- 1499 MHz CPU speed -->
+      <value>1583000</value> <!-- 1583 MHz CPU speed -->
+      <value>1666000</value> <!-- 1666 MHz CPU speed -->
+      <value>1749000</value> <!-- 1749 MHz CPU speed -->
+      <value>1833000</value> <!-- 1833 MHz CPU speed -->
+  </array>
+  <!-- Current when CPU is idle -->
+  <item name="cpu.idle">11</item>
+  <!-- Current due to wake lock held -->
+  <item name="cpu.awake">6</item>
+  <!-- Current at each CPU speed, as per 'cpu.speeds' -->
+  <array name="cpu.active">
+      <value>285</value> <!-- 499  MHz CPU speed -->
+      <value>305</value> <!-- 583  MHz CPU speed -->
+      <value>325</value> <!-- 666  MHz CPU speed -->
+      <value>345</value> <!-- 749  MHz CPU speed -->
+      <value>360</value> <!-- 833  MHz CPU speed -->
+      <value>380</value> <!-- 916  MHz CPU speed -->
+      <value>405</value> <!-- 999  MHz CPU speed -->
+      <value>420</value> <!-- 1083 MHz CPU speed -->
+      <value>450</value> <!-- 1166 MHz CPU speed -->
+      <value>470</value> <!-- 1249 MHz CPU speed -->
+      <value>505</value> <!-- 1333 MHz CPU speed -->
+      <value>575</value> <!-- 1416 MHz CPU speed -->
+      <value>600</value> <!-- 1499 MHz CPU speed -->
+      <value>625</value> <!-- 1583 MHz CPU speed -->
+      <value>625</value> <!-- 1666 MHz CPU speed -->
+      <value>625</value> <!-- 1749 MHz CPU speed -->
+      <value>625</value> <!-- 1833 MHz CPU speed -->
+  </array>
+  <!-- This is the battery capacity in mAh (measured at nominal voltage) -->
+  <item name="battery.capacity">4500</item>
+</device>

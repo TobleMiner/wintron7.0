@@ -1,0 +1,4 @@
+[global]
+record_type = fallback
+module_name = power
+library_name = power.i2c.so

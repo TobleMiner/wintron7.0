@@ -1,0 +1,4 @@
+exec /system/bin/wpa_supplicant \
+     -Dnl80211 -iwlan0 -g@android:wpa_wlan0 \
+     -c/data/misc/wifi/wpa_supplicant.conf \
+     -dt -e /data/misc/wifi/entropy.bin

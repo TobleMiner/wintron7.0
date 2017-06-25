@@ -1,0 +1,13 @@
+[global]
+module_name = media
+mount_source = haswell
+record_type = regular
+
+[properties]
+ro.camera.platform.compat = haswell
+
+[device]
+# pci:v00008086d00000A26sv*sd*bc*sc*i*
+bus = pci
+vid = 00008086
+did = 00000A26

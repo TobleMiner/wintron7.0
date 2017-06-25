@@ -1,0 +1,6 @@
+[global]
+module_name = camera
+
+[device]
+bus = acpi
+desc = XXOV2680:OVSN2680

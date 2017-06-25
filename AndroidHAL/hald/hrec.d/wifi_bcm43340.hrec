@@ -1,0 +1,12 @@
+# BCM43340 WiFi HAL record
+
+[global]
+module_name = wifi
+
+[fuse]
+src_name = wpa_supplicant-start-bcm43340
+dst_name = wpa_supplicant-start
+
+[device]
+bus = acpi
+desc = BCM4334

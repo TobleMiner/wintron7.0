@@ -1,0 +1,28 @@
+<!-- RT282 -->
+
+<mixer>
+  <!-- These are the initial mixer settings -->
+  <ctl name="Speaker Playback Switch" value="0" />
+  <ctl name="Speaker Playback Volume" value="87" />
+  <ctl name="Master Playback Switch" value="0" />
+  <ctl name="Master Playback Volume" value="87" />
+  <ctl name="Headphone Playback Switch" value="0" />
+  <ctl name="Headphone Playback Volume" value="87" />
+  <ctl name="Capture Switch" value="0" />
+  <ctl name="Capture Volume" value="63" />
+
+  <path name="speaker">
+    <ctl name="Speaker Playback Switch" value="1" />
+    <ctl name="Master Playback Switch" value="1" />
+  </path>
+
+  <path name="headphone">
+    <ctl name="Headphone Playback Switch" value="1" />
+    <ctl name="Master Playback Switch" value="1" />
+  </path>
+
+  <path name="main-mic-top">
+    <ctl name="Capture Switch" value="1" />
+    <ctl name="Capture Volume" value="40" />
+  </path>
+</mixer>

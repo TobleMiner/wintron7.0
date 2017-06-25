@@ -1,0 +1,13 @@
+[global]
+module_name = audio
+record_type = regular
+
+[properties]
+persist.audio.audioConf = AudioParameterFramework-malata8.xml
+persist.audio.routeConf = RouteParameterFramework-malata8.xml
+
+[nv]
+type = EFI
+namespace = ecb54cd9-e5ae-4fdc-a971-e877756068f7
+name = coho_board_type
+data = MALATA8

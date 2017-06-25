@@ -1,0 +1,43 @@
+# InvenSense MPU-6050 sensors
+
+[global]
+module_name = sensors
+library_name = iio-sensors-hal.so
+
+[device]
+bus = acpi
+desc = INVN6050
+
+[properties]
+ro.iio.accel.name = MPU-6050 Accelerometer
+ro.iio.accel.vendor = InvenSense
+ro.iio.accel.max_range = 39.2
+ro.iio.accel.resolution = 0.01
+ro.iio.accel.power = 0.5
+ro.iio.accel.max_freq = 200
+ro.iio.accel.scale = 0.001196
+
+ro.iio.anglvel.name = MPU-6050 Gyroscope
+ro.iio.anglvel.vendor = InvenSense
+ro.iio.anglvel.max_range = 30
+ro.iio.anglvel.resolution = 0.001
+ro.iio.anglvel.power = 3
+ro.iio.anglvel.max_freq = 200
+
+ro.iio.temp.name = MPU-6050 Temperature Sensor
+ro.iio.temp.vendor = InvenSense
+ro.iio.temp.max_range = 85
+ro.iio.temp.resolution = 0.1
+ro.iio.temp.power = 0.001
+
+[fuse]
+src_name = android.hardware.sensor.accelerometer.xml
+mount_type = permissions
+
+[fuse]
+src_name = android.hardware.sensor.gyroscope.xml
+mount_type = permissions
+
+[fuse]
+src_name = android.hardware.sensor.ambient_temperature.xml
+mount_type = permissions

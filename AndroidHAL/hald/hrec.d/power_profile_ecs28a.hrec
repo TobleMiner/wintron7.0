@@ -1,0 +1,13 @@
+[global]
+module_name = power
+record_type = regular
+
+[fuse]
+src_name = power_profile_ecs28a.xml
+dst_name = power_profile.xml
+
+[nv]
+type = EFI
+namespace = ecb54cd9-e5ae-4fdc-a971-e877756068f7
+name = coho_board_type
+data = ECS28A

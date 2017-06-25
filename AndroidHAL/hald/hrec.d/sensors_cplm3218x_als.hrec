@@ -1,0 +1,21 @@
+# Capella Micro CPLM3218x Ambient Light sensor HAL record
+
+[global]
+module_name = sensors
+library_name = iio-sensors-hal.so
+
+[device]
+bus = acpi
+desc = CPLM3218
+
+[properties]
+ro.iio.illuminance.name = CPLM3218x Ambient Light Sensor
+ro.iio.illuminance.vendor = Capella Microsystems
+ro.iio.illuminance.max_range = 167000
+ro.iio.illuminance.resolution = 1
+ro.iio.illuminance.power = .001
+ro.iio.illuminance.illumincalib = 4000
+
+[fuse]
+src_name = android.hardware.sensor.light.xml
+mount_type = permissions

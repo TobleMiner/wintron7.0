@@ -1,0 +1,33 @@
+# Bosch BMG0160 Gyro HAL record
+
+[global]
+module_name = sensors
+library_name = iio-sensors-hal.so
+
+[device]
+bus = acpi
+desc = BMG0160
+
+[properties]
+ro.iio.anglvel.name = BMG160 Gyroscope
+ro.iio.anglvel.vendor = Bosch Sensortec
+ro.iio.anglvel.max_range = 17.45
+ro.iio.anglvel.resolution = 0.001
+ro.iio.anglvel.power = 5
+ro.iio.anglvel.scale = 0.000532
+ro.iio.anglvel.max_freq = 200
+ro.iio.anglvel.quirks = noisy continuous spotty
+
+ro.iio.temp.bmg160.name = BMG160 Thermometer
+ro.iio.temp.bmg160.vendor = Bosch Sensortec
+ro.iio.temp.bmg160.max_range = 85
+ro.iio.temp.bmg160.resolution = 0.01
+ro.iio.temp.bmg160.power = 0.1
+
+[fuse]
+src_name = android.hardware.sensor.gyroscope.xml
+mount_type = permissions
+
+[fuse]
+src_name = android.hardware.sensor.ambient_temperature.xml
+mount_type = permissions

@@ -1,0 +1,10 @@
+# Wilkins Peak 2 SCO audio
+
+[global]
+module_name = audio.a2dp
+library_name = audio.a2dp.bluez.so
+
+[device]
+bus = usb
+vid = 8087
+did = 07DC

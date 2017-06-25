@@ -1,0 +1,23 @@
+# KXCJ 1013 accelerometer HAL record
+
+[global]
+module_name = sensors
+library_name = iio-sensors-hal.so
+
+[device]
+bus = acpi
+desc = KXCJ1013
+
+[properties]
+ro.iio.accel.name = KXCJK-1013 Accelerometer
+ro.iio.accel.vendor = Kionix
+ro.iio.accel.max_range = 39.19
+ro.iio.accel.resolution = 0.01
+ro.iio.accel.power = 0.5
+ro.iio.accel.min_freq = 10
+ro.iio.accel.max_freq = 200
+ro.iio.accel.quirks = hrtimer
+
+[fuse]
+src_name = android.hardware.sensor.accelerometer.xml
+mount_type = permissions

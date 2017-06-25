@@ -1,0 +1,32 @@
+# Bosch BMA222E Accelerometer HAL record
+
+[global]
+module_name = sensors
+library_name = iio-sensors-hal.so
+
+[device]
+bus = acpi
+desc = BMA222E
+
+[properties]
+ro.iio.accel.name = BMA222E Accelerometer
+ro.iio.accel.vendor = Bosch Sensortec
+ro.iio.accel.max_range = 39.24
+ro.iio.accel.resolution = 0.01
+ro.iio.accel.power = 0.5
+ro.iio.accel.max_freq = 200
+ro.iio.accel.quirks = spotty
+
+ro.iio.temp.name = BMA222E Thermometer
+ro.iio.temp.vendor = Bosch Sensortec
+ro.iio.temp.max_range = 85
+ro.iio.temp.resolution = 0.01
+ro.iio.temp.power = 0.1
+
+[fuse]
+src_name = android.hardware.sensor.accelerometer.xml
+mount_type = permissions
+
+[fuse]
+src_name = android.hardware.sensor.ambient_temperature.xml
+mount_type = permissions

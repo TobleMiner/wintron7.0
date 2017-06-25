@@ -1,0 +1,167 @@
+<!-- RT564X MALATA -->
+
+<mixer>
+  <ctl name="media0_in gain 0 volume" value="0 0" />
+  <ctl name="media3_in gain 0 volume" value="0 0" />
+
+  <!-- Bluetooth configuration for SCO -->
+  <ctl name="ssp1_out mux 0" value="bt" />
+  <ctl name="domain bt mode 0" value="narrowband" />
+  <ctl name="bt_out mix 0 voip_in" value="1" />
+  <ctl name="voip_out mix 0 bt_in" value="1" />
+
+  <ctl name="voip_out gain 0 volume" value="0 0" />
+  <ctl name="voip_out gain 0 rampduration" value="5" />
+  <ctl name="voip_out gain 0 mute" value="0" />
+
+  <ctl name="voip_in gain 0 volume" value="-40 -40" />
+  <ctl name="voip_in gain 0 rampduration" value="5" />
+  <ctl name="voip_in gain 0 mute" value="0" />
+
+  <ctl name="bt_out gain 0 volume" value="0 0" />
+  <ctl name="bt_out gain 0 rampduration" value="5" />
+  <ctl name="bt_out gain 0 mute" value="0" />
+
+  <ctl name="bt_in gain 0 volume" value="0 0" />
+  <ctl name="bt_in gain 0 rampduration" value="5" />
+  <ctl name="bt_in gain 0 mute" value="0" />
+  <!-- End of bluetooth configuration for SCO -->
+
+  <ctl name="codec_in0 gain 0 mute" value="0" />
+  <ctl name="pcm1_out mix 0 codec_in0" value="1" />
+  <ctl name="pcm1_out gain 0 mute" value="0" />
+
+  <ctl name="codec_out0 mix 0 pcm0_in" value="1" />
+  <ctl name="media0_out mix 0 media1_in" value="1" />
+  <ctl name="media1_in gain 0 volume" value="0 0" />
+  <ctl name="media1_in gain 0 rampduration" value="5" />
+  <ctl name="media1_in gain 0 mute" value="0" />
+  <ctl name="pcm0_in gain 0 volume" value="0 0" />
+  <ctl name="pcm0_in gain 0 rampduration" value="5" />
+  <ctl name="pcm0_in gain 0 mute" value="0" />
+  <ctl name="codec_out0 gain 0 volume" value="0 0" />
+  <ctl name="codec_out0 gain 0 rampduration" value="5" />
+  <ctl name="codec_out0 gain 0 mute" value="0" />
+
+  <ctl name="Speaker Boost" value="4" />
+  <ctl name="LOUT MIX DAC L1 Switch" value="0" />
+  <ctl name="LOUT MIX DAC R1 Switch" value="0" />
+  <ctl name="DIG MIXR DAC R2 Switch" value="0" />
+  <ctl name="Stereo DAC MIXR DAC R2 Switch" value="1" />
+  <ctl name="Stereo DAC MIXL DAC L2 Switch" value="1" />
+  <ctl name="IF2 ADC R Mux" value="TxDP" />
+  <ctl name="IF2 ADC L Mux" value="TxDP" />
+  <ctl name="Mono ADC MIXR ADC1 Switch" value="1" />
+  <ctl name="Mono ADC MIXR ADC2 Switch" value="1" />
+  <ctl name="Mono ADC MIXL ADC1 Switch" value="1" />
+  <ctl name="Mono ADC MIXL ADC2 Switch" value="1" />
+  <ctl name="Stereo ADC MIXR ADC2 Switch" value="1" />
+  <ctl name="Stereo ADC MIXL ADC2 Switch" value="1" />
+  <ctl name="DAC MIXL INF1 Switch" value="1" />
+  <ctl name="DAC MIXR INF1 Switch" value="1" />
+  <ctl name="Stereo DAC MIXL DAC L1 Switch" value="1" />
+  <ctl name="Stereo DAC MIXR DAC R1 Switch" value="1" />
+  <ctl name="SPK MIXL DAC L1 Switch" value="1" />
+  <ctl name="SPK MIXR DAC R1 Switch" value="1" />
+  <ctl name="SPOL MIX SPKVOL L Switch" value="1" />
+  <ctl name="SPOR MIX SPKVOL R Switch" value="1" />
+
+  <ctl name="pcm1_out mix 0 codec_in1" value="0" />
+  <ctl name="pcm1_out gain 0 volume" value="0 0" />
+  <ctl name="codec_in0 gain 0 volume" value="0 0" />
+
+  <ctl name="IN Capture Volume" value="23" />
+  <ctl name="RECMIXR INR Switch" value="0" />
+  <ctl name="RECMIXR BST1 Switch" value="0" />
+  <ctl name="RECMIXL INL Switch" value="0" />
+  <ctl name="RECMIXL BST1 Switch" value="0" />
+  <ctl name="Stereo ADC L1 Mux" value="ADC" />
+  <ctl name="Stereo ADC R1 Mux" value="ADC" />
+  <ctl name="Stereo ADC MIXL ADC1 Switch" value="1" />
+  <ctl name="Stereo ADC MIXR ADC1 Switch" value="1" />
+  <ctl name="ADC Boost Gain" value="0" />
+
+  <ctl name="Speaker Playback Volume" value="31" />
+  <ctl name="DAC2 Playback Switch" value="1" />
+
+   <!-- define paths for audio routing -->
+  <path name="speaker">
+    <ctl name="ADC IF1 Data Switch" value="Normal" />
+    <ctl name="DAC IF1 Data Switch" value="Normal" />
+
+    <ctl name="DAC1 Playback Volume" value="165" />
+    <ctl name="Mono DAC Playback Volume" value="130" />
+    <ctl name="HP Playback Volume" value="0" />
+
+    <ctl name="Headphone Switch" value="0" />
+    <ctl name="HPO MIX DAC1 Switch" value="0" />
+    <ctl name="Ext Spk Switch" value="1" />
+    <ctl name="Speaker Playback Switch" value="1" />
+  </path>
+
+  <path name="speaker-reverse">
+    <ctl name="ADC IF1 Data Switch" value="Swap" />
+    <ctl name="DAC IF1 Data Switch" value="Swap" />
+
+    <ctl name="DAC1 Playback Volume" value="165" />
+    <ctl name="Mono DAC Playback Volume" value="130" />
+    <ctl name="HP Playback Volume" value="0" />
+
+    <ctl name="Headphone Switch" value="0" />
+    <ctl name="HPO MIX DAC1 Switch" value="0" />
+    <ctl name="Ext Spk Switch" value="1" />
+    <ctl name="Speaker Playback Switch" value="1" />
+  </path>
+
+  <path name="headphone">
+    <ctl name="ADC IF1 Data Switch" value="Normal" />
+    <ctl name="DAC IF1 Data Switch" value="Normal" />
+
+    <ctl name="DAC1 Playback Volume" value="130" />
+    <ctl name="Mono DAC Playback Volume" value="175" />
+    <ctl name="HP Playback Volume" value="31" />
+
+    <ctl name="Headphone Switch" value="1" />
+    <ctl name="HPO MIX DAC1 Switch" value="1" />
+    <ctl name="Ext Spk Switch" value="0" />
+    <ctl name="Speaker Playback Switch" value="0" />
+  </path>
+
+  <path name="speaker-and-headphone">
+    <ctl name="ADC IF1 Data Switch" value="Normal" />
+    <ctl name="DAC IF1 Data Switch" value="Normal" />
+
+    <ctl name="DAC1 Playback Volume" value="132" />
+    <ctl name="Mono DAC Playback Volume" value="175" />
+    <ctl name="HP Playback Volume" value="31" />
+
+    <ctl name="Headphone Switch" value="1" />
+    <ctl name="HPO MIX DAC1 Switch" value="1" />
+    <ctl name="Ext Spk Switch" value="1" />
+    <ctl name="Speaker Playback Switch" value="1" />
+  </path>
+
+  <path name="headset-in">
+    <!-- Speficic to headset for external mic -->
+    <ctl name="RECMIXR BST3 Switch" value="0" />
+    <ctl name="RECMIXR BST2 Switch" value="1" />
+    <ctl name="RECMIXL BST3 Switch" value="0" />
+    <ctl name="RECMIXL BST2 Switch" value="1" />
+
+    <ctl name="Headset Mic Switch" value="1" />
+    <ctl name="Int Mic Switch" value="0" />
+    <ctl name="ADC Capture Volume" value="110 110" />
+  </path>
+
+  <path name="main-mic-top">
+    <ctl name="RECMIXR BST3 Switch" value="1" />
+    <ctl name="RECMIXR BST2 Switch" value="0" />
+    <ctl name="RECMIXL BST3 Switch" value="1" />
+    <ctl name="RECMIXL BST2 Switch" value="0" />
+
+    <ctl name="ADC Capture Switch" value="1" />
+    <ctl name="ADC Capture Volume" value="110 110" />
+    <ctl name="Int Mic Switch" value="1" />
+  </path>
+</mixer>
+

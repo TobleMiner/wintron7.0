@@ -1,0 +1,16 @@
+[script]
+filename = rc.hald_media_hook_chiphd_byt
+one_shot = 1
+
+[device]
+bus = acpi
+desc = XXOV5648:OVSN5648
+
+[device]
+bus = acpi
+desc = XXOV2680:OVSN2680
+
+[device]
+bus = pci
+vid = 00008086
+did = 00000F31

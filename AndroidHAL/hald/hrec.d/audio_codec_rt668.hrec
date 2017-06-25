@@ -1,0 +1,15 @@
+[global]
+module_name = audio
+record_type = regular
+
+[fuse]
+src_name = mixer_paths_rt668.xml
+dst_name = mixer_paths.xml
+
+[device]
+# pci:v00008086d00009C20sv00001028sd000005E3bc*sc*i*
+bus = pci
+vid = 00008086
+did = 00009C20
+svid = 00001028
+sdid = 000005E3

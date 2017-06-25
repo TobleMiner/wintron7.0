@@ -1,0 +1,66 @@
+<!--
+	=> "format" field should be one of the following values
+		0: PCM_FORMAT_S16_LE
+		1: PCM_FORMAT_S32_LE
+		2: PCM_FORMAT_S8
+		3: PCM_FORMAT_S24_LE
+
+	=> "prolog_silence_ms" field is used to write a "silence buffer"
+		when sending the first PCM frame (after device wakeup) to
+		the HW (due to the ramp duration constraint)
+-->
+
+<cards>
+	<!-- RT5640: PCM -->
+	<card type="PCM" id="bytcrrt5640">
+		<device type="OUTPUT" idx="0" prolog_silence_ms="5">
+			<pcm_config channels="2" rate="48000" period_size="1536" period_count="4" format="0" start_threshold="0" stop_threshold="0" silence_threshold="0" />
+		</device>
+		<device type="INPUT" idx="0">
+			<pcm_config channels="2" rate="48000" period_size="1024" period_count="4" format="0" start_threshold="0" stop_threshold="0" silence_threshold="0" />
+		</device>
+	</card>
+
+	<!-- RT5640: Bluetooth SCO -->
+	<card type="BT" id="bytcrrt5640">
+		<device type="OUTPUT" idx="1" prolog_silence_ms="0">
+			<pcm_config channels="1" rate="8000" period_size="256" period_count="4" format="0" start_threshold="0" stop_threshold="0" silence_threshold="0" />
+		</device>
+		<device type="INPUT" idx="1">
+			<pcm_config channels="1"  rate="8000" period_size="256" period_count="4" format="0" start_threshold="0" stop_threshold="0" silence_threshold="0" />
+		</device>
+	</card>
+
+
+
+	<!-- RT5651: PCM -->
+	<card type="PCM" id="bytcrrt5651">
+		<device type="OUTPUT" idx="0" prolog_silence_ms="5">
+			<pcm_config channels="2" rate="48000" period_size="1536" period_count="4" format="0" start_threshold="0" stop_threshold="0" silence_threshold="0" />
+		</device>
+		<device type="INPUT" idx="0">
+			<pcm_config channels="2" rate="48000" period_size="1024" period_count="4" format="0" start_threshold="0" stop_threshold="0" silence_threshold="0" />
+		</device>
+	</card>
+
+	<!-- RT5651: Bluetooth SCO -->
+	<card type="BT" id="bytcrrt5651">
+		<device type="OUTPUT" idx="1" prolog_silence_ms="0">
+			<pcm_config channels="1" rate="8000" period_size="256" period_count="4" format="0" start_threshold="0" stop_threshold="0" silence_threshold="0" />
+		</device>
+		<device type="INPUT" idx="1">
+			<pcm_config channels="1"  rate="8000" period_size="256" period_count="4" format="0" start_threshold="0" stop_threshold="0" silence_threshold="0" />
+		</device>
+	</card>
+
+
+
+	<!-- HDMI card -->
+	<card type="HDMI" id="IntelHDMI" prolog_silence_ms="0">
+		<device type="OUTPUT" idx="0">
+			<pcm_config channels="2" rate="48000" period_size="2048" period_count="4" format="0" start_threshold="0" stop_threshold="0" silence_threshold="0" />
+		</device>
+	</card>
+
+</cards>
+

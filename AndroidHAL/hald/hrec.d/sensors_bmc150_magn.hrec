@@ -1,0 +1,23 @@
+# Bosch BMC150 Magnetometer HAL record
+
+[global]
+module_name = sensors
+library_name = iio-sensors-hal.so
+
+[device]
+bus = acpi
+desc = BSBM0150
+
+[properties]
+ro.iio.magn.name = BMC150 Magnetometer
+ro.iio.magn.vendor = Bosch Sensortec
+ro.iio.magn.max_range = 2500
+ro.iio.magn.resolution = 0.3
+ro.iio.magn.power = 2
+ro.iio.magn.quirks = noisy
+ro.iio.magn.min_freq = 15
+ro.iio.magn.cal_steps = 3
+
+[fuse]
+src_name = android.hardware.sensor.compass.xml
+mount_type = permissions

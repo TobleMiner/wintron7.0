@@ -1,0 +1,4 @@
+[global]
+record_type = fallback
+module_name = bluetooth
+library_name = bluetooth.default.so

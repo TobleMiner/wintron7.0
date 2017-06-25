@@ -1,0 +1,13 @@
+[global]
+module_name = dmi
+record_type = regular
+
+[device]
+bus = dmi
+vid = Trekstor
+did = SurfTab
+
+[script]
+filename = rc.fwupdate_wipe
+one_shot = 1
+deferred = data_fs

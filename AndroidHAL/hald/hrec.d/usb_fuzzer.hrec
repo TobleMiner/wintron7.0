@@ -1,0 +1,13 @@
+# hrec test file for USB fuzzer
+
+[global]
+# Android HAL module name
+module_name = usb_fuzzer
+# HAL library name
+library_name = usb_fuzzer.so
+
+[device]
+# Modalias definition
+bus = usb
+vid = 1111
+did = 2222

@@ -1,0 +1,22 @@
+# LiteOn LTR-301 Ambient Light sensor HAL record
+
+[global]
+module_name = sensors
+library_name = iio-sensors-hal.so
+
+[device]
+bus = acpi
+desc = LTER0301
+
+[properties]
+ro.iio.intensity.name = LiteOn LTR-301 ALS
+ro.iio.intensity.vendor = LiteOn
+ro.iio.intensity.max_range = 65535
+ro.iio.intensity.resolution = 0.01
+ro.iio.intensity.power = .02
+ro.iio.intensity.scale = 0.005
+ro.iio.intensity.quirks = no-event, no-trig
+
+[fuse]
+src_name = android.hardware.sensor.light.xml
+mount_type = permissions

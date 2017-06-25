@@ -1,0 +1,4 @@
+[global]
+record_type = fallback
+module_name = lights
+library_name = lights.intel.so

@@ -1,0 +1,7 @@
+[global]
+module_name = camera
+
+[device]
+bus = acpi
+desc = XXGC2155:XXGC2155
+

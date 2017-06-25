@@ -1,0 +1,10 @@
+# Wilkins Peak 2 BT adapter
+
+[global]
+module_name = bluetooth
+library_name = bluetooth.bluez.so
+
+[device]
+bus = usb
+vid = 8087
+did = 07DC

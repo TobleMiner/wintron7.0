@@ -1,0 +1,21 @@
+# Capella Micro CM3232 Ambient Light sensor HAL record
+
+[global]
+module_name = sensors
+library_name = iio-sensors-hal.so
+
+[device]
+bus = acpi
+desc = CALS3232
+
+[properties]
+ro.iio.illuminance.name = CM3232 Ambient Light Sensor
+ro.iio.illuminance.vendor = Capella Microsystems
+ro.iio.illuminance.max_range = 167000
+ro.iio.illuminance.resolution = 1
+ro.iio.illuminance.power = .001
+ro.iio.illuminance.illumincalib = 400000
+
+[fuse]
+src_name = android.hardware.sensor.light.xml
+mount_type = permissions

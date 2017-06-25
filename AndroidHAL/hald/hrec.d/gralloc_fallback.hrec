@@ -1,0 +1,5 @@
+[global]
+record_type = fallback
+module_name = gralloc
+library_name = gralloc.autodetect.so
+mount_source = llvmpipe

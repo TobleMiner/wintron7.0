@@ -1,0 +1,30 @@
+# JSA-1212 ambient light and proximity sensor HAL record
+
+[global]
+module_name = sensors
+library_name = iio-sensors-hal.so
+
+[device]
+bus = acpi
+desc = JSA1212
+
+[properties]
+ro.iio.illuminance.name = JSA-1212 Ambient Light Sensor
+ro.iio.illuminance.vendor = Solteam Opto
+ro.iio.illuminance.max_range = 2048
+ro.iio.illuminance.resolution = 0.5
+ro.iio.illuminance.power = .001
+
+ro.iio.proximity.name = JSA-1212 Proximity Sensor
+ro.iio.proximity.vendor = Solteam Opto
+ro.iio.proximity.max_range = 255
+ro.iio.proximity.resolution = 1
+ro.iio.proximity.power = .001
+
+[fuse]
+src_name = android.hardware.sensor.light.xml
+mount_type = permissions
+
+[fuse]
+src_name = android.hardware.sensor.proximity.xml
+mount_type = permissions

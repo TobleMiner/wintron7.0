@@ -1,0 +1,13 @@
+# Broadcom BT adapter BCM2EXX
+
+[global]
+module_name = bluetooth
+library_name = bluetooth.default.so
+
+[device]
+bus = acpi
+desc = BCM2E*
+
+[script]
+filename = rc.hci-def_attach
+one_shot = 1

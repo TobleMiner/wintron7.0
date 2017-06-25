@@ -1,0 +1,61 @@
+# Intel iio sensors
+
+[global]
+module_name = sensors
+library_name = iio-sensors-hal.so
+
+[device]
+bus = hid
+vid = 00008087
+did = 000009FA
+
+[properties]
+ro.iio.accel.name = Accelerometer
+ro.iio.accel.vendor = Intel
+ro.iio.accel.max_range = 20
+ro.iio.accel.resolution = 0.01
+ro.iio.accel.power = 0.23
+ro.iio.accel.transform = ISH
+ro.iio.accel.quirks = init-rate,terse
+
+ro.iio.anglvel.name = Gyroscope
+ro.iio.anglvel.vendor = Intel
+ro.iio.anglvel.max_range = 35
+ro.iio.anglvel.resolution = 0.002
+ro.iio.anglvel.power = 6.1
+ro.iio.anglvel.transform = ISH
+ro.iio.anglvel.quirks = init-rate,terse
+
+ro.iio.magn.name = Compass
+ro.iio.magn.vendor = Intel
+ro.iio.magn.max_range = 2048
+ro.iio.magn.resolution = 0.01
+ro.iio.magn.power = 0.1
+ro.iio.magn.transform = ISH
+ro.iio.magn.quirks = init-rate,terse
+
+ro.iio.incli.name = Orientation Sensor
+ro.iio.incli.vendor = Intel
+ro.iio.incli.max_range = 360
+ro.iio.incli.resolution = 0.01
+ro.iio.incli.power = 0.1
+ro.iio.incli.transform = ISH
+
+ro.iio.rot.name = Rotation Vector Sensor
+ro.iio.rot.vendor = Intel
+ro.iio.rot.max_range = 1
+ro.iio.rot.resolution = 0.001
+ro.iio.rot.power = 0.1
+ro.iio.rot.transform = ISH
+
+[fuse]
+src_name = android.hardware.sensor.accelerometer.xml
+mount_type = permissions
+
+[fuse]
+src_name = android.hardware.sensor.gyroscope.xml
+mount_type = permissions
+
+[fuse]
+src_name = android.hardware.sensor.compass.xml
+mount_type = permissions

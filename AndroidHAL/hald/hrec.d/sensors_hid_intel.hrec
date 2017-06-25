@@ -1,0 +1,22 @@
+# Intel hid sensors
+
+[global]
+module_name = sensors
+library_name = hid-sensor-hub.so
+
+[device]
+bus = hid
+vid = 00008086
+did = 000009FA
+
+[fuse]
+src_name = android.hardware.sensor.accelerometer.xml
+mount_type = permissions
+
+[fuse]
+src_name = android.hardware.sensor.gyroscope.xml
+mount_type = permissions
+
+[fuse]
+src_name = android.hardware.sensor.compass.xml
+mount_type = permissions

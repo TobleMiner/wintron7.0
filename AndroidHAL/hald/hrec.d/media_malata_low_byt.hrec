@@ -1,0 +1,13 @@
+[script]
+filename = rc.hald_media_hook_malata_low_byt
+one_shot = 1
+
+[device]
+bus = acpi
+desc = XXOV2680:OVSN2680
+instances = 2
+
+[device]
+bus = pci
+vid = 00008086
+did = 00000F31

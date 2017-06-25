@@ -1,0 +1,10 @@
+[global]
+module_name = wifi
+mount_source = rtk
+record_type = regular
+
+[device]
+# sdio:c*v024CdB723
+bus = sdio
+vid = 024C
+did = B723

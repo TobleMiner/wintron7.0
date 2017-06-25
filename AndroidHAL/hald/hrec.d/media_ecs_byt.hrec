@@ -1,0 +1,16 @@
+[script]
+filename = rc.hald_media_hook_ecs_byt
+one_shot = 1
+
+[device]
+bus = acpi
+desc = INT33BE:INT33BE
+
+[device]
+bus = acpi
+desc = INT33F0:INT33F0
+
+[device]
+bus = pci
+vid = 00008086
+did = 00000F31

@@ -1,0 +1,12 @@
+[global]
+module_name = audio
+record_type = regular
+
+[fuse]
+src_name = mixer_paths_rt565x.xml
+dst_name = mixer_paths.xml
+
+[device]
+# platform:byt_rt5651
+bus = platform
+desc = byt_rt5651

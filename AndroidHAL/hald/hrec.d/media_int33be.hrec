@@ -1,0 +1,7 @@
+[global]
+module_name = camera
+
+[device]
+bus = acpi
+desc = INT33BE:INT33BE
+

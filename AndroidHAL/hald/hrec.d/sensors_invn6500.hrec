@@ -1,0 +1,48 @@
+# InvenSense acpi sensors
+
+[global]
+module_name = sensors
+library_name = iio-sensors-hal.so
+
+[device]
+bus = acpi
+desc = INVN6500
+
+[properties]
+ro.iio.accel.name = MPU-6500 Accelerometer
+ro.iio.accel.vendor = InvenSense
+ro.iio.accel.max_range = 16
+ro.iio.accel.resolution = 0.01
+ro.iio.accel.power = 0.5
+ro.iio.accel.x.opt_scale = -1
+ro.iio.accel.z.opt_scale = -1
+
+ro.iio.anglvel.name = MPU-6500 Gyroscope
+ro.iio.anglvel.vendor = InvenSense
+ro.iio.anglvel.max_range = 30
+ro.iio.anglvel.resolution = 0.001
+ro.iio.anglvel.power = 3
+ro.iio.anglvel.x.opt_scale = -1
+ro.iio.anglvel.z.opt_scale = -1
+
+ro.iio.temp.name = MPU-6500 Temperature Sensor
+ro.iio.temp.vendor = InvenSense
+ro.iio.temp.max_range = 85
+ro.iio.temp.resolution = 0.1
+ro.iio.temp.power = 0.001
+
+ro.iio.magn.name = AK8975 Compass
+ro.iio.magn.vendor = Asahi Kasei
+ro.iio.magn.max_range = 1200
+ro.iio.magn.resolution = 0.01
+ro.iio.magn.power = .3
+ro.iio.magn.x.opt_scale = -1
+ro.iio.magn.z.opt_scale = -1
+
+[fuse]
+src_name = android.hardware.sensor.accelerometer.xml
+mount_type = permissions
+
+[fuse]
+src_name = android.hardware.sensor.gyroscope.xml
+mount_type = permissions

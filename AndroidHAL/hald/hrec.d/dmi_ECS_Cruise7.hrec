@@ -1,0 +1,14 @@
+[global]
+module_name = dmi
+record_type = regular
+
+[device]
+# dmi:*:svnECS:pnCruise7:*
+bus = dmi
+vid = ECS
+did = Cruise7
+
+[fuse]
+mount_type = default
+src_name = gpsconfig_4752_extlna.xml
+dst_name = gps_bcm4752.xml

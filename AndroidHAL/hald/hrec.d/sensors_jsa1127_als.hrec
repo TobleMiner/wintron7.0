@@ -1,0 +1,20 @@
+# JSA-1127 ambient light sensor HAL record
+
+[global]
+module_name = sensors
+library_name = iio-sensors-hal.so
+
+[device]
+bus = acpi
+desc = JSA1127
+
+[properties]
+ro.iio.illuminance.name = JSA-1127 Ambient Light Sensor
+ro.iio.illuminance.vendor = Solteam Opto
+ro.iio.illuminance.max_range = 60000
+ro.iio.illuminance.resolution = 1
+ro.iio.illuminance.power = .01
+
+[fuse]
+src_name = android.hardware.sensor.light.xml
+mount_type = permissions

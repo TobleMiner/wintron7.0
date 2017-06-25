@@ -1,0 +1,13 @@
+# BCM4330 WiFi HAL record
+
+[global]
+module_name = wifi
+mount_source = brcm
+
+[fuse]
+src_name = wpa_supplicant-start-bcm43340
+dst_name = wpa_supplicant-start
+
+[device]
+bus = acpi
+desc = BCM4330

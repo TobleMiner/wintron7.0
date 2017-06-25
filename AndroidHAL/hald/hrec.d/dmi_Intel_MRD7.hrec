@@ -1,0 +1,14 @@
+[global]
+module_name = dmi
+record_type = regular
+
+[device]
+# dmi:*:svnIntel:pnMRD7:*
+bus = dmi
+vid = Intel
+did = MRD7
+
+[fuse]
+mount_type = default
+src_name = gpsconfig_4752_intlna.xml
+dst_name = gps_bcm4752.xml
